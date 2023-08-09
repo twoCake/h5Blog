@@ -1,0 +1,60 @@
+.login-container {
+	background-color: #f8f8f8;
+	width: 100%;
+	.banner-bg{
+		width: 100%;
+		height: 400rpx;
+	}
+	.login-nav{
+		@include flex();
+		padding: 0 146rpx;
+		font-size: 30rpx;
+		font-weight: bold;
+		color: #ddd;
+		.nav-item{
+			position: relative;
+			margin-bottom: 40rpx;
+			&.active{
+				color: $base-color;
+				&::after{
+					content:"";
+					position: absolute;
+					bottom: -20rpx;
+					width: 60rpx;
+					left: 50%;
+					transform: translateX(-50%);
+					height: 8rpx;
+					border-radius: 4rpx;
+					background-color: $base-color;
+				}
+			}
+		}
+	}
+}
+
+// 由于uni-froms组件中有自己的样式，如果我们想修改，则需要使用/deep/
+/deep/ .uni-forms-item__content{
+	@include flex(flex-start,center);
+	padding-left: 40rpx;
+}
+/deep/ .uni-forms-item{
+	border-bottom: 1px solid #eee;
+	padding: 24rpx 0 24rpx 30rpx;
+	background-color: #fff;
+}
+/deep/ .uni-forms-item__inner{
+	padding-bottom: 24rpx;
+}
+.placeholder{
+	color: #999;
+}
+.login-btn{
+	width: 640rpx;
+	height: 90rpx;
+	border-radius: 10rpx;
+	background-color: $base-color;
+	color: #fff;
+	font-size: 32rpx;
+	@include flex(center);
+	margin-top: 80rpx;
+}

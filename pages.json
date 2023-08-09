@@ -1,0 +1,105 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				// 取消默认的原生导航栏
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/follow/follow",
+			"style": {
+				"navigationBarTitleText": "关注",
+				"enablePullDownRefresh": false
+			},
+			"meta": {
+				"needLogin": true
+			}
+		}, {
+			"path": "pages/self/self",
+			"style": {
+				"navigationBarTitleText": "用户信息",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/search/search",
+			"style": {
+				// 取消默认的原生导航栏
+				"navigationStyle": "custom"
+			}
+
+		}, {
+			"path": "pages/userInfo/login/login",
+			"style": {
+				"navigationBarTitleText": "用户登录",
+				"enablePullDownRefresh": false
+			},
+			"name": "login"
+
+		}, {
+			"path": "pages/labelAdmin/labelAdmin",
+			"style": {
+				"navigationBarTitleText": "标签管理",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/articleDetail/articleDetail",
+			"style": {
+				"navigationBarTitleText": "文章详情",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/commentList/commentList",
+			"style": {
+				"navigationBarTitleText": "评论列表",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	    ,{
+            "path" : "pages/myArticle/myArticle",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的文章",
+                "enablePullDownRefresh": false
+            },
+			"meta":{
+				"needLogin":true
+			}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "天灯的h5博客",
+		"navigationBarBackgroundColor": "#f25037",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#666",
+		"selectedColor": "#f25037",
+		"backgroundColor": "#fff",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/img/home.png",
+				"selectedIconPath": "static/img/home-active.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/follow/follow",
+				"iconPath": "static/img/follow.png",
+				"selectedIconPath": "static/img/follow-active.png",
+				"text": "关注"
+			},
+			{
+				"pagePath": "pages/self/self",
+				"iconPath": "static/img/my.png",
+				"selectedIconPath": "static/img/my-active.png",
+				"text": "我的"
+			}
+		]
+	}
+}
